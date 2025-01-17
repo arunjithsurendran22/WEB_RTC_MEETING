@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+
+.toggle-switch {
+  appearance: none;
+  width: 40px;
+  height: 20px;
+  background: #e5e7eb;
+  border-radius: 999px;
+  position: relative;
+  outline: none;
+  transition: background 0.3s ease;
+  cursor: pointer;
+}
+.toggle-switch:checked {
+  background: #34d399;
+}
+.toggle-switch:before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: white;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.3s ease;
+}
+.toggle-switch:checked:before {
+  transform: translateX(20px);
+}
+
